@@ -6,12 +6,13 @@ import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TodoItemServiceImpl implements TodoItemService {
+public class ToDoItemServiceImpl implements TodoItemService {
 
+    // == fields ==
     @Getter
     private final TodoData data = new TodoData();
 
-
+    // == public methods ==
     @Override
     public void addItem(TodoItem toAdd) {
         data.addItem(toAdd);
@@ -31,5 +32,4 @@ public class TodoItemServiceImpl implements TodoItemService {
     public void updateItem(TodoItem toUpdate) {
         data.updateItem(toUpdate);
     }
-
 }
